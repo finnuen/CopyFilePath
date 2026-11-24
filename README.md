@@ -23,13 +23,11 @@ The entry sits at the top of the menu, for files and for folders:
 
 Installing and removing it is a couple of dialogs, nothing more:
 
-<img src="assets/install-uninstall.png" width="700" alt="Install and uninstall dialogs">
+<img src="assets/install-uninstall.jpg" width="700" alt="Install and uninstall dialogs">
 
-Select several items and every path lands on its own line:
+Select several items and every path lands on its own line, in name order:
 
-    E:\User\3D Objects
-    E:\User\Contacts
-    E:\User\Desktop
+<img src="assets/multi-select.jpg" width="279" alt="Clipboard holding the paths of three selected folders">
 
 ## Use
 
