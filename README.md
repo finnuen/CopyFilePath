@@ -15,6 +15,22 @@ A single `.exe` of about 1.4 MB - the right-click helper is embedded in it - wit
 installer, no admin rights, nothing to install first, and nothing running in the
 background.
 
+## What it looks like
+
+The entry sits at the top of the menu, for files and for folders:
+
+<img src="assets/menu.png" width="689" alt="Right-click menu showing Copy file path and Copy folder path">
+
+Installing and removing it is a couple of dialogs, nothing more:
+
+<img src="assets/install-uninstall.png" width="700" alt="Install and uninstall dialogs">
+
+Select several items and every path lands on its own line:
+
+    E:\User\3D Objects
+    E:\User\Contacts
+    E:\User\Desktop
+
 ## Use
 
 1. Double-click `CopyFilePath.exe` and press **Yes**.
@@ -73,6 +89,7 @@ run it again; it replaces the installed copy and keeps your menu entries.
     build.bat
 
 Output: `build\CopyFilePath_v<version>.exe`, printed at the end. `build.bat -KeepVersion`
-rebuilds without bumping the version, `build.bat -Version 1.2` sets it. The version is two digits: `1.0`, then `1.1`.
+rebuilds without bumping the version, `build.bat -Version 1.2` sets it. The version is two
+digits: `1.0`, then `1.1`.
 
-Needs the Rust toolchain (`cargo`, MSVC target) and nothing else; see `AGENTS.md`.
+Needs the Rust toolchain (`cargo` and a Windows target, MSVC or MinGW) and nothing else; see `AGENTS.md`.
