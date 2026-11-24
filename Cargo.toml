@@ -1,0 +1,44 @@
+[package]
+name = "copy-file-path"
+version = "1.0.0"
+edition = "2021"
+description = "Adds Copy file path to the Windows Explorer right-click menu"
+
+[lib]
+name = "copy_file_path"
+# rlib for the exe, cdylib for the shell handler Explorer loads.
+crate-type = ["rlib", "cdylib"]
+
+[[bin]]
+name = "CopyFilePath"
+path = "src/main.rs"
+
+[dependencies]
+winreg = "0.52"
+clipboard-win = "5"
+
+[dependencies.windows-sys]
+version = "0.59"
+features = [
+  "Win32_Foundation",
+  "Win32_Graphics_Gdi",
+  "Win32_Networking_WinHttp",
+  "Win32_Security",
+  "Win32_System_Com",
+  "Win32_System_LibraryLoader",
+  "Win32_System_Console",
+  "Win32_System_Threading",
+  "Win32_System_SystemInformation",
+  "Win32_UI_Controls",
+  "Win32_UI_Shell",
+  "Win32_UI_WindowsAndMessaging",
+]
+
+[build-dependencies]
+embed-resource = "2.5"
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+strip = true
